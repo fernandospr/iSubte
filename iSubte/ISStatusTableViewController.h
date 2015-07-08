@@ -11,6 +11,6 @@
 
 @interface ISStatusTableViewController : UITableViewController
 
-@property (strong, nonatomic) ISSubwayStatusClient *statusClient;
+@property (strong, nonatomic) id<ISSubwayStatusClient> statusClient;
 
 @end

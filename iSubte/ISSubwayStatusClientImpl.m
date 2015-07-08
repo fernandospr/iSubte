@@ -1,22 +1,22 @@
 //
-//  ISSubwayStatusClient.m
+//  ISSubwayStatusClientImpl.m
 //  iSubte
 //
 //  Created by Fernando Sproviero on 7/7/15.
 //  Copyright (c) 2015 FS. All rights reserved.
 //
 
-#import "ISSubwayStatusClient.h"
+#import "ISSubwayStatusClientImpl.h"
 #import "AFNetworking.h"
 #import "ISSubway+Serializer.h"
 
-@interface ISSubwayStatusClient()
+@interface ISSubwayStatusClientImpl()
 
 @property (copy, nonatomic) NSString *baseUrl;
 
 @end
 
-@implementation ISSubwayStatusClient
+@implementation ISSubwayStatusClientImpl
 
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl
 {
@@ -27,8 +27,8 @@
     return self;
 }
 
-- (void)subwayStatusesWithSuccesBlockWithSuccessBlock:(void (^)(NSArray *subways))successBlock
-                                           errorBlock:(void (^)(NSError *error))errorBlock {
+- (void)subwayStatusesWithSuccessBlock:(void (^)(NSArray *subways))successBlock
+                            errorBlock:(void (^)(NSError *error))errorBlock {
     NSString *serviceUrl = [self.baseUrl stringByAppendingString:@"/Estado?site=Metrovias"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

@@ -43,7 +43,7 @@
 - (void)fetchItems
 {
     __weak typeof(self) weakSelf = self;
-    [self.statusClient subwayStatusesWithSuccesBlockWithSuccessBlock:^(NSArray *subways) {
+    [self.statusClient subwayStatusesWithSuccessBlock:^(NSArray *subways) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         strongSelf.items = subways;
         [strongSelf.tableView reloadData];

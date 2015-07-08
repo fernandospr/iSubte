@@ -8,7 +8,7 @@
 
 #import "ISApplicationAssembly.h"
 #import "ISStatusTableViewController.h"
-#import "ISSubwayStatusClient.h"
+#import "ISSubwayStatusClientImpl.h"
 
 @implementation ISApplicationAssembly
 
@@ -25,9 +25,9 @@
                           }];
 }
 
-- (ISSubwayStatusClient *)statusClient
+- (ISSubwayStatusClientImpl *)statusClient
 {
-    return [TyphoonDefinition withClass:[ISSubwayStatusClient class]
+    return [TyphoonDefinition withClass:[ISSubwayStatusClientImpl class]
                           configuration:^(TyphoonDefinition *definition) {
         [definition useInitializer:@selector(initWithBaseUrl:) parameters:^(TyphoonMethod *initializer) {
             [initializer injectParameterWith:TyphoonConfig(@"api.baseUrl")];
