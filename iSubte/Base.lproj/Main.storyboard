@@ -7,7 +7,7 @@
         <!--iSubte-->
         <scene sceneID="0Vn-7M-yV1">
             <objects>
-                <tableViewController id="yx4-QD-1Ng" sceneMemberID="viewController">
+                <tableViewController id="yx4-QD-1Ng" customClass="ISStatusTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="VFK-az-TKI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

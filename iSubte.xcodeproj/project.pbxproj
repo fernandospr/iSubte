@@ -10,11 +10,11 @@
 		396CB5A8272653CB391C127D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8089F1630908E7A6816D02 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9B6AEEB81B4D7EBC00641C60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEB71B4D7EBC00641C60 /* main.m */; };
 		9B6AEEBB1B4D7EBC00641C60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */; };
-		9B6AEEBE1B4D7EBC00641C60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBD1B4D7EBC00641C60 /* ViewController.m */; };
 		9B6AEEC11B4D7EBC00641C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBF1B4D7EBC00641C60 /* Main.storyboard */; };
 		9B6AEEC31B4D7EBC00641C60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEC21B4D7EBC00641C60 /* Images.xcassets */; };
 		9B6AEEC61B4D7EBC00641C60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */; };
 		9B6AEED21B4D7EBC00641C60 /* iSubteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */; };
+		9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +33,14 @@
 		9B6AEEB71B4D7EBC00641C60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B6AEEB91B4D7EBC00641C60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9B6AEEBC1B4D7EBC00641C60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9B6AEEBD1B4D7EBC00641C60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9B6AEEC01B4D7EBC00641C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B6AEEC21B4D7EBC00641C60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9B6AEEC51B4D7EBC00641C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9B6AEECB1B4D7EBC00641C60 /* iSubteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSubteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6AEED01B4D7EBC00641C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iSubteTests.m; sourceTree = "<group>"; };
+		9BB834591B4D814D001C645C /* ISStatusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStatusTableViewController.h; sourceTree = "<group>"; };
+		9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStatusTableViewController.m; sourceTree = "<group>"; };
 		AA8089F1630908E7A6816D02 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D3C0765BD242D225252CC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB8BF04F6D8F1D7812B34430 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,10 +97,9 @@
 		9B6AEEB41B4D7EBC00641C60 /* iSubte */ = {
 			isa = PBXGroup;
 			children = (
+				9BB8345C1B4D8156001C645C /* ViewController */,
 				9B6AEEB91B4D7EBC00641C60 /* AppDelegate.h */,
 				9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */,
-				9B6AEEBC1B4D7EBC00641C60 /* ViewController.h */,
-				9B6AEEBD1B4D7EBC00641C60 /* ViewController.m */,
 				9B6AEEBF1B4D7EBC00641C60 /* Main.storyboard */,
 				9B6AEEC21B4D7EBC00641C60 /* Images.xcassets */,
 				9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */,
@@ -133,6 +132,15 @@
 				9B6AEED01B4D7EBC00641C60 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BB8345C1B4D8156001C645C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9BB834591B4D814D001C645C /* ISStatusTableViewController.h */,
+				9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		EDDB8A49C38F66B31E7EF2C8 /* Frameworks */ = {
@@ -294,9 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6AEEBE1B4D7EBC00641C60 /* ViewController.m in Sources */,
 				9B6AEEBB1B4D7EBC00641C60 /* AppDelegate.m in Sources */,
 				9B6AEEB81B4D7EBC00641C60 /* main.m in Sources */,
+				9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
