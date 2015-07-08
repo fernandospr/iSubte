@@ -15,6 +15,7 @@
 		9B6AEEC61B4D7EBC00641C60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */; };
 		9B6AEED21B4D7EBC00641C60 /* iSubteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */; };
 		9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */; };
+		9BB834641B4D8242001C645C /* ISSubwayStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB834631B4D8242001C645C /* ISSubwayStatusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iSubteTests.m; sourceTree = "<group>"; };
 		9BB834591B4D814D001C645C /* ISStatusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStatusTableViewController.h; sourceTree = "<group>"; };
 		9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStatusTableViewController.m; sourceTree = "<group>"; };
+		9BB834621B4D8242001C645C /* ISSubwayStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSubwayStatusCell.h; sourceTree = "<group>"; };
+		9BB834631B4D8242001C645C /* ISSubwayStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSubwayStatusCell.m; sourceTree = "<group>"; };
 		AA8089F1630908E7A6816D02 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D3C0765BD242D225252CC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB8BF04F6D8F1D7812B34430 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		9B6AEEB41B4D7EBC00641C60 /* iSubte */ = {
 			isa = PBXGroup;
 			children = (
+				9BB834611B4D823A001C645C /* Views */,
 				9BB8345C1B4D8156001C645C /* ViewController */,
 				9B6AEEB91B4D7EBC00641C60 /* AppDelegate.h */,
 				9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */,
@@ -141,6 +145,15 @@
 				9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9BB834611B4D823A001C645C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BB834621B4D8242001C645C /* ISSubwayStatusCell.h */,
+				9BB834631B4D8242001C645C /* ISSubwayStatusCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		EDDB8A49C38F66B31E7EF2C8 /* Frameworks */ = {
@@ -304,6 +317,7 @@
 			files = (
 				9B6AEEBB1B4D7EBC00641C60 /* AppDelegate.m in Sources */,
 				9B6AEEB81B4D7EBC00641C60 /* main.m in Sources */,
+				9BB834641B4D8242001C645C /* ISSubwayStatusCell.m in Sources */,
 				9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
