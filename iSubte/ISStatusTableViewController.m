@@ -49,10 +49,22 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         strongSelf.items = subways;
         [strongSelf.tableView reloadData];
+        [strongSelf updateRefreshControlWithDate:[NSDate date]];
         [strongSelf.refreshControl endRefreshing];
     } errorBlock:^(NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+}
+
+- (void)updateRefreshControlWithDate:(NSDate *)date
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM d, h:mm a"];
+    NSString *title = [NSString stringWithFormat:@"Última actualización: %@", [formatter stringFromDate:date]];
+    NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:[UIColor blackColor]
+                                                                forKey:NSForegroundColorAttributeName];
+    NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:attrsDictionary];
+    self.refreshControl.attributedTitle = attributedTitle;
 }
 
 #pragma mark - Table view data source
