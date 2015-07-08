@@ -12,6 +12,11 @@
 
 @implementation ISApplicationAssembly
 
+- (id)config
+{
+    return [TyphoonDefinition configDefinitionWithName:@"Configuration.plist"];
+}
+
 - (ISStatusTableViewController *)statusTableViewController
 {
     return [TyphoonDefinition withClass:[ISStatusTableViewController class]
@@ -22,7 +27,12 @@
 
 - (ISSubwayStatusClient *)statusClient
 {
-    return [TyphoonDefinition withClass:[ISSubwayStatusClient class]];
+    return [TyphoonDefinition withClass:[ISSubwayStatusClient class]
+                          configuration:^(TyphoonDefinition *definition) {
+        [definition useInitializer:@selector(initWithBaseUrl:) parameters:^(TyphoonMethod *initializer) {
+            [initializer injectParameterWith:TyphoonConfig(@"api.baseUrl")];
+        }];
+    }];
 }
 
 @end

@@ -18,6 +18,7 @@
 		9B6AEEC61B4D7EBC00641C60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */; };
 		9B6AEED21B4D7EBC00641C60 /* iSubteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */; };
 		9B8185D91B4D9AD000993CF1 /* ISApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8185D81B4D9AD000993CF1 /* ISApplicationAssembly.m */; };
+		9B8185DB1B4D9E9200993CF1 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8185DA1B4D9E9200993CF1 /* Configuration.plist */; };
 		9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */; };
 		9BB834641B4D8242001C645C /* ISSubwayStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB834631B4D8242001C645C /* ISSubwayStatusCell.m */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iSubteTests.m; sourceTree = "<group>"; };
 		9B8185D71B4D9AD000993CF1 /* ISApplicationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISApplicationAssembly.h; sourceTree = "<group>"; };
 		9B8185D81B4D9AD000993CF1 /* ISApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISApplicationAssembly.m; sourceTree = "<group>"; };
+		9B8185DA1B4D9E9200993CF1 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		9BB834591B4D814D001C645C /* ISStatusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStatusTableViewController.h; sourceTree = "<group>"; };
 		9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStatusTableViewController.m; sourceTree = "<group>"; };
 		9BB834621B4D8242001C645C /* ISSubwayStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSubwayStatusCell.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				9B8185D71B4D9AD000993CF1 /* ISApplicationAssembly.h */,
 				9B8185D81B4D9AD000993CF1 /* ISApplicationAssembly.m */,
+				9B8185DA1B4D9E9200993CF1 /* Configuration.plist */,
 			);
 			name = Assembly;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6AEEC11B4D7EBC00641C60 /* Main.storyboard in Resources */,
+				9B8185DB1B4D9E9200993CF1 /* Configuration.plist in Resources */,
 				9B6AEEC61B4D7EBC00641C60 /* LaunchScreen.xib in Resources */,
 				9B6AEEC31B4D7EBC00641C60 /* Images.xcassets in Resources */,
 			);

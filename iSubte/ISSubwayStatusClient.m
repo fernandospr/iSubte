@@ -10,13 +10,26 @@
 #import "AFNetworking.h"
 #import "ISSubway+Serializer.h"
 
-static NSString *const ISBaseUrl = @"http://www.metrovias.com.ar/Subterraneos";
+@interface ISSubwayStatusClient()
+
+@property (copy, nonatomic) NSString *baseUrl;
+
+@end
 
 @implementation ISSubwayStatusClient
 
+- (instancetype)initWithBaseUrl:(NSString *)baseUrl
+{
+    self = [super init];
+    if (self) {
+        self.baseUrl = baseUrl;
+    }
+    return self;
+}
+
 - (void)subwayStatusesWithSuccesBlockWithSuccessBlock:(void (^)(NSArray *subways))successBlock
                                            errorBlock:(void (^)(NSError *error))errorBlock {
-    NSString *serviceUrl = [ISBaseUrl stringByAppendingString:@"/Estado?site=Metrovias"];
+    NSString *serviceUrl = [self.baseUrl stringByAppendingString:@"/Estado?site=Metrovias"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:serviceUrl

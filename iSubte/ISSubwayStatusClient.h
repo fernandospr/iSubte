@@ -10,6 +10,8 @@
 
 @interface ISSubwayStatusClient : NSObject
 
+- (instancetype)initWithBaseUrl:(NSString *)baseUrl;
+
 - (void)subwayStatusesWithSuccesBlockWithSuccessBlock:(void (^)(NSArray *subways))successBlock // Array of ISSubwayStatus
                                            errorBlock:(void (^)(NSError *error))errorBlock;
 
