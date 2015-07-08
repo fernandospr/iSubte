@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		396CB5A8272653CB391C127D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8089F1630908E7A6816D02 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9B56E72C1B4D82C90052DBFA /* ISSubwayStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E72B1B4D82C90052DBFA /* ISSubwayStatus.m */; };
+		9B56E7321B4D832B0052DBFA /* ISSubway+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E7311B4D832B0052DBFA /* ISSubway+Serializer.m */; };
+		9B56E7341B4D83FB0052DBFA /* ISSubwayStatusClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E7331B4D83FB0052DBFA /* ISSubwayStatusClient.m */; };
 		9B6AEEB81B4D7EBC00641C60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEB71B4D7EBC00641C60 /* main.m */; };
 		9B6AEEBB1B4D7EBC00641C60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */; };
 		9B6AEEC11B4D7EBC00641C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBF1B4D7EBC00641C60 /* Main.storyboard */; };
@@ -32,6 +34,10 @@
 /* Begin PBXFileReference section */
 		9B56E72A1B4D82C90052DBFA /* ISSubwayStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSubwayStatus.h; sourceTree = "<group>"; };
 		9B56E72B1B4D82C90052DBFA /* ISSubwayStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSubwayStatus.m; sourceTree = "<group>"; };
+		9B56E72E1B4D832B0052DBFA /* ISSubway+Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ISSubway+Serializer.h"; sourceTree = "<group>"; };
+		9B56E7301B4D832B0052DBFA /* ISSubwayStatusClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSubwayStatusClient.h; sourceTree = "<group>"; };
+		9B56E7311B4D832B0052DBFA /* ISSubway+Serializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ISSubway+Serializer.m"; sourceTree = "<group>"; };
+		9B56E7331B4D83FB0052DBFA /* ISSubwayStatusClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSubwayStatusClient.m; sourceTree = "<group>"; };
 		9B6AEEB21B4D7EBC00641C60 /* iSubte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSubte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6AEEB61B4D7EBC00641C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B6AEEB71B4D7EBC00641C60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +95,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		9B56E72D1B4D830B0052DBFA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9B56E72E1B4D832B0052DBFA /* ISSubway+Serializer.h */,
+				9B56E7311B4D832B0052DBFA /* ISSubway+Serializer.m */,
+				9B56E7301B4D832B0052DBFA /* ISSubwayStatusClient.h */,
+				9B56E7331B4D83FB0052DBFA /* ISSubwayStatusClient.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		9B6AEEA91B4D7EBC00641C60 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +129,9 @@
 		9B6AEEB41B4D7EBC00641C60 /* iSubte */ = {
 			isa = PBXGroup;
 			children = (
+				9B56E72D1B4D830B0052DBFA /* Service */,
 				9B56E7261B4D82AD0052DBFA /* Model */,
-				9BB834611B4D823A001C645C /* Views */,
+				9BB834611B4D823A001C645C /* View */,
 				9BB8345C1B4D8156001C645C /* ViewController */,
 				9B6AEEB91B4D7EBC00641C60 /* AppDelegate.h */,
 				9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */,
@@ -160,13 +178,13 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		9BB834611B4D823A001C645C /* Views */ = {
+		9BB834611B4D823A001C645C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				9BB834621B4D8242001C645C /* ISSubwayStatusCell.h */,
 				9BB834631B4D8242001C645C /* ISSubwayStatusCell.m */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
 		EDDB8A49C38F66B31E7EF2C8 /* Frameworks */ = {
@@ -330,6 +348,8 @@
 			files = (
 				9B6AEEBB1B4D7EBC00641C60 /* AppDelegate.m in Sources */,
 				9B6AEEB81B4D7EBC00641C60 /* main.m in Sources */,
+				9B56E7321B4D832B0052DBFA /* ISSubway+Serializer.m in Sources */,
+				9B56E7341B4D83FB0052DBFA /* ISSubwayStatusClient.m in Sources */,
 				9B56E72C1B4D82C90052DBFA /* ISSubwayStatus.m in Sources */,
 				9BB834641B4D8242001C645C /* ISSubwayStatusCell.m in Sources */,
 				9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */,
