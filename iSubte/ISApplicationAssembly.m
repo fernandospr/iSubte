@@ -7,7 +7,22 @@
 //
 
 #import "ISApplicationAssembly.h"
+#import "ISStatusTableViewController.h"
+#import "ISSubwayStatusClient.h"
 
 @implementation ISApplicationAssembly
+
+- (ISStatusTableViewController *)statusTableViewController
+{
+    return [TyphoonDefinition withClass:[ISStatusTableViewController class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(statusClient) with:[self statusClient]];
+                          }];
+}
+
+- (ISSubwayStatusClient *)statusClient
+{
+    return [TyphoonDefinition withClass:[ISSubwayStatusClient class]];
+}
 
 @end

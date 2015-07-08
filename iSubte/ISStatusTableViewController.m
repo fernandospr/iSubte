@@ -8,7 +8,6 @@
 
 #import "ISStatusTableViewController.h"
 #import "ISSubwayStatus.h"
-#import "ISSubwayStatusClient.h"
 #import "ISSubwayStatusCell.h"
 
 @interface ISStatusTableViewController ()
@@ -22,7 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [self configureRefreshControl];
 }
 
@@ -43,9 +42,8 @@
 
 - (void)fetchItems
 {
-    ISSubwayStatusClient *statusClient = [[ISSubwayStatusClient alloc] init];
     __weak typeof(self) weakSelf = self;
-    [statusClient subwayStatusesWithSuccesBlockWithSuccessBlock:^(NSArray *subways) {
+    [self.statusClient subwayStatusesWithSuccesBlockWithSuccessBlock:^(NSArray *subways) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         strongSelf.items = subways;
         [strongSelf.tableView reloadData];

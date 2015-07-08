@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ISSubwayStatusClient.h"
 
 @interface ISStatusTableViewController : UITableViewController
+
+@property (strong, nonatomic) ISSubwayStatusClient *statusClient;
 
 @end
