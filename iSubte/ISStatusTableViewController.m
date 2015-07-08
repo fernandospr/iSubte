@@ -19,6 +19,21 @@
 
 @implementation ISStatusTableViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    [self configureRefreshControl];
+}
+
+- (void)configureRefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(fetchItems)
+                  forControlEvents:UIControlEventValueChanged];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -31,9 +46,10 @@
     ISSubwayStatusClient *statusClient = [[ISSubwayStatusClient alloc] init];
     __weak typeof(self) weakSelf = self;
     [statusClient subwayStatusesWithSuccesBlockWithSuccessBlock:^(NSArray *subways) {
-        __strong typeof(self) strongSelf = weakSelf;
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         strongSelf.items = subways;
         [strongSelf.tableView reloadData];
+        [strongSelf.refreshControl endRefreshing];
     } errorBlock:^(NSError *error) {
         NSLog(@"Error: %@", error);
     }];
