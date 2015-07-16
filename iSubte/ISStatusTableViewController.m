@@ -72,7 +72,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ISSubwayStatus *subway = self.items[indexPath.row];
         ISDetailViewController *detailViewController = segue.destinationViewController;
-        detailViewController.lineName = [@"Línea " stringByAppendingString:subway.name];
+        detailViewController.lineName = subway.name;
     }
 }
 

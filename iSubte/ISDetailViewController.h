@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ISBannerProtocol.h"
+#import "ISSubwayInfo.h"
 
 @interface ISDetailViewController : UIViewController
 
 @property (copy, nonatomic) NSString *lineName;
+@property (copy, nonatomic) NSString *urlLine;
+
 @property (strong, nonatomic) UIViewController<ISBannerProtocol> *bannerViewController;
+@property (strong, nonatomic) ISSubwayInfo *subwayInfo;
 
 @end

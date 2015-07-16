@@ -11,6 +11,7 @@
 		9B53368A1B56E61D009A5BA8 /* UIViewController+Container.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5336891B56E61D009A5BA8 /* UIViewController+Container.m */; };
 		9B53368E1B571AF3009A5BA8 /* ISBannerTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B53368D1B571AF3009A5BA8 /* ISBannerTwoViewController.m */; };
 		9B5336901B571B43009A5BA8 /* ISBannerTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B53368F1B571B43009A5BA8 /* ISBannerTwoViewController.xib */; };
+		9B5336951B575260009A5BA8 /* ISSubwayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5336941B575260009A5BA8 /* ISSubwayInfo.m */; };
 		9B56E72C1B4D82C90052DBFA /* ISSubwayStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E72B1B4D82C90052DBFA /* ISSubwayStatus.m */; };
 		9B56E7321B4D832B0052DBFA /* ISSubway+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E7311B4D832B0052DBFA /* ISSubway+Serializer.m */; };
 		9B56E7341B4D83FB0052DBFA /* ISSubwayStatusClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E7331B4D83FB0052DBFA /* ISSubwayStatusClientImpl.m */; };
@@ -46,6 +47,8 @@
 		9B53368D1B571AF3009A5BA8 /* ISBannerTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISBannerTwoViewController.m; sourceTree = "<group>"; };
 		9B53368F1B571B43009A5BA8 /* ISBannerTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISBannerTwoViewController.xib; sourceTree = "<group>"; };
 		9B5336921B57492C009A5BA8 /* ISBannerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISBannerProtocol.h; sourceTree = "<group>"; };
+		9B5336931B575260009A5BA8 /* ISSubwayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSubwayInfo.h; sourceTree = "<group>"; };
+		9B5336941B575260009A5BA8 /* ISSubwayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSubwayInfo.m; sourceTree = "<group>"; };
 		9B56E72A1B4D82C90052DBFA /* ISSubwayStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSubwayStatus.h; sourceTree = "<group>"; };
 		9B56E72B1B4D82C90052DBFA /* ISSubwayStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSubwayStatus.m; sourceTree = "<group>"; };
 		9B56E72E1B4D832B0052DBFA /* ISSubway+Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ISSubway+Serializer.h"; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 			children = (
 				9B56E72A1B4D82C90052DBFA /* ISSubwayStatus.h */,
 				9B56E72B1B4D82C90052DBFA /* ISSubwayStatus.m */,
+				9B5336931B575260009A5BA8 /* ISSubwayInfo.h */,
+				9B5336941B575260009A5BA8 /* ISSubwayInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				9B56E7321B4D832B0052DBFA /* ISSubway+Serializer.m in Sources */,
 				9B56E7341B4D83FB0052DBFA /* ISSubwayStatusClientImpl.m in Sources */,
 				9B56E72C1B4D82C90052DBFA /* ISSubwayStatus.m in Sources */,
+				9B5336951B575260009A5BA8 /* ISSubwayInfo.m in Sources */,
 				9BB834641B4D8242001C645C /* ISSubwayStatusCell.m in Sources */,
 				9BFA6ACF1B56DFE100B2486F /* ISDetailViewController.m in Sources */,
 				9BB8345B1B4D814D001C645C /* ISStatusTableViewController.m in Sources */,

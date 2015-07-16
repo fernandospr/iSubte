@@ -21,7 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com.ar"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[self.subwayInfo urlForLine:self.lineName]];
     [self.webView loadRequest:request];
     [self configureBannerViewController];
 }
@@ -29,7 +29,9 @@
 - (void)configureBannerViewController
 {
     [self.bannerViewController setLineName:self.lineName];
-    [self containerAddChildViewController:self.bannerViewController toContainerView:self.bannerContainerView useAutolayout:YES];
+    [self containerAddChildViewController:self.bannerViewController
+                          toContainerView:self.bannerContainerView
+                            useAutolayout:YES];
 }
 
 @end
