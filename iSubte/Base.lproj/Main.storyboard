@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XfT-I8-KLY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XfT-I8-KLY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--iSubte-->
@@ -80,6 +80,7 @@
                                     <outlet property="nameLabel" destination="VuG-S3-XHM" id="HsU-sU-aEQ"/>
                                     <outlet property="statusIndicatorView" destination="FUR-Fk-eys" id="tBL-gL-Ob2"/>
                                     <outlet property="statusLabel" destination="Npr-08-uXD" id="NnQ-22-vOc"/>
+                                    <segue destination="7Ui-6H-3FQ" kind="show" identifier="Detail" id="RbA-HV-QET"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,6 +94,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtG-2E-7RF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1480" y="353"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="SVt-oX-foq">
+            <objects>
+                <viewController id="7Ui-6H-3FQ" customClass="ISDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yLh-TZ-JHt"/>
+                        <viewControllerLayoutGuide type="bottom" id="XyV-8r-dqj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d6F-Rh-ROt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gL-nw-Sn7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmg-39-m9X" userLabel="Banner Container View">
+                                <rect key="frame" x="0.0" y="508" width="600" height="92"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="WPm-vb-Nmg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wmg-39-m9X" firstAttribute="leading" secondItem="d6F-Rh-ROt" secondAttribute="leading" id="Mfx-az-mPm"/>
+                            <constraint firstItem="9gL-nw-Sn7" firstAttribute="leading" secondItem="d6F-Rh-ROt" secondAttribute="leading" id="OZT-NQ-kya"/>
+                            <constraint firstItem="9gL-nw-Sn7" firstAttribute="top" secondItem="d6F-Rh-ROt" secondAttribute="top" id="QZ3-ki-c89"/>
+                            <constraint firstItem="XyV-8r-dqj" firstAttribute="top" secondItem="Wmg-39-m9X" secondAttribute="bottom" id="V86-VK-Psr"/>
+                            <constraint firstItem="XyV-8r-dqj" firstAttribute="top" secondItem="9gL-nw-Sn7" secondAttribute="bottom" id="fnq-Ml-cqd"/>
+                            <constraint firstAttribute="trailing" secondItem="9gL-nw-Sn7" secondAttribute="trailing" id="gBW-hG-wez"/>
+                            <constraint firstAttribute="trailing" secondItem="Wmg-39-m9X" secondAttribute="trailing" id="heg-HP-fkO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerContainerView" destination="Wmg-39-m9X" id="fGe-Tj-h4y"/>
+                        <outlet property="webView" destination="9gL-nw-Sn7" id="9s9-IB-lvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eN-Ii-rxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2174" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MAA-6C-iz1">

@@ -9,6 +9,9 @@
 #import "ISApplicationAssembly.h"
 #import "ISStatusTableViewController.h"
 #import "ISSubwayStatusClientImpl.h"
+#import "ISDetailViewController.h"
+#import "ISBannerOneViewController.h"
+#import "ISBannerTwoViewController.h"
 
 @implementation ISApplicationAssembly
 
@@ -33,6 +36,26 @@
             [initializer injectParameterWith:TyphoonConfig(@"api.baseUrl")];
         }];
     }];
+}
+
+- (ISDetailViewController *)detailViewController
+{
+    return [TyphoonDefinition withClass:[ISDetailViewController class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(bannerViewController)
+                                                    with:[self bannerViewController]];
+    }];
+}
+
+- (UIViewController<ISBannerProtocol> *)bannerViewController {
+    return [TyphoonDefinition withClass:[ISBannerTwoViewController class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition useInitializer:@selector(initWithNibName:bundle:)
+                                              parameters:^(TyphoonMethod *initializer) {
+                                                  [initializer injectParameterWith:@"ISBannerTwoViewController"];
+                                                  [initializer injectParameterWith:[NSBundle mainBundle]];
+                              }];
+   }];
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "ISStatusTableViewController.h"
 #import "ISSubwayStatus.h"
 #import "ISSubwayStatusCell.h"
+#import "ISDetailViewController.h"
 
 @interface ISStatusTableViewController ()
 
@@ -63,6 +64,16 @@
                                                                 forKey:NSForegroundColorAttributeName];
     NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:attrsDictionary];
     self.refreshControl.attributedTitle = attributedTitle;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Detail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ISSubwayStatus *subway = self.items[indexPath.row];
+        ISDetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.lineName = [@"Línea " stringByAppendingString:subway.name];
+    }
 }
 
 #pragma mark - Table view data source
