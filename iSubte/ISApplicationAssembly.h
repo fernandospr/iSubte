@@ -7,7 +7,10 @@
 //
 
 #import <Typhoon/Typhoon.h>
+@class ISDetailViewController;
 
 @interface ISApplicationAssembly : TyphoonAssembly
+
+- (ISDetailViewController *)detailViewController;
 
 @end

@@ -9,7 +9,6 @@
 #import "ISStatusTableViewController.h"
 #import "ISSubwayStatus.h"
 #import "ISSubwayStatusCell.h"
-#import "ISDetailViewController.h"
 
 @interface ISStatusTableViewController ()
 
@@ -22,7 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.title = @"iSubte";
+    [self.tableView registerNib:[UINib nibWithNibName:@"ISSubwayStatusCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"StatusCell"];
     [self configureRefreshControl];
 }
 
@@ -66,15 +66,6 @@
     self.refreshControl.attributedTitle = attributedTitle;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"Detail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        ISSubwayStatus *subway = self.items[indexPath.row];
-        ISDetailViewController *detailViewController = segue.destinationViewController;
-        detailViewController.lineName = subway.name;
-    }
-}
 
 #pragma mark - Table view data source
 
@@ -93,6 +84,15 @@
     [cell setLineLabelText:[@"Línea " stringByAppendingString:subway.name]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ISDetailViewController *detailViewController = [self.detailControllerProvider detailViewController];
+    
+    ISSubwayStatus *subway = self.items[indexPath.row];
+    detailViewController.lineName = subway.name;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

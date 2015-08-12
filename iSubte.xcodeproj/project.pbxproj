@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		396CB5A8272653CB391C127D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8089F1630908E7A6816D02 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9B06E8491B597E1C007CA92E /* ISDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B06E8481B597E1C007CA92E /* ISDetailViewController.xib */; };
+		9B06E84B1B597F15007CA92E /* ISSubwayStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B06E84A1B597F15007CA92E /* ISSubwayStatusCell.xib */; };
+		9B06E8501B5981D2007CA92E /* ISStatusTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B06E84E1B5981D2007CA92E /* ISStatusTableViewController.xib */; };
 		9B53368A1B56E61D009A5BA8 /* UIViewController+Container.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5336891B56E61D009A5BA8 /* UIViewController+Container.m */; };
 		9B53368E1B571AF3009A5BA8 /* ISBannerTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B53368D1B571AF3009A5BA8 /* ISBannerTwoViewController.m */; };
 		9B5336901B571B43009A5BA8 /* ISBannerTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B53368F1B571B43009A5BA8 /* ISBannerTwoViewController.xib */; };
@@ -17,7 +20,6 @@
 		9B56E7341B4D83FB0052DBFA /* ISSubwayStatusClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56E7331B4D83FB0052DBFA /* ISSubwayStatusClientImpl.m */; };
 		9B6AEEB81B4D7EBC00641C60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEB71B4D7EBC00641C60 /* main.m */; };
 		9B6AEEBB1B4D7EBC00641C60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */; };
-		9B6AEEC11B4D7EBC00641C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEBF1B4D7EBC00641C60 /* Main.storyboard */; };
 		9B6AEEC31B4D7EBC00641C60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEC21B4D7EBC00641C60 /* Images.xcassets */; };
 		9B6AEEC61B4D7EBC00641C60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */; };
 		9B6AEED21B4D7EBC00641C60 /* iSubteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEED11B4D7EBC00641C60 /* iSubteTests.m */; };
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B06E8481B597E1C007CA92E /* ISDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISDetailViewController.xib; sourceTree = "<group>"; };
+		9B06E84A1B597F15007CA92E /* ISSubwayStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISSubwayStatusCell.xib; sourceTree = "<group>"; };
+		9B06E84E1B5981D2007CA92E /* ISStatusTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISStatusTableViewController.xib; sourceTree = "<group>"; };
 		9B5336881B56E61D009A5BA8 /* UIViewController+Container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Container.h"; sourceTree = "<group>"; };
 		9B5336891B56E61D009A5BA8 /* UIViewController+Container.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Container.m"; sourceTree = "<group>"; };
 		9B53368C1B571AF3009A5BA8 /* ISBannerTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISBannerTwoViewController.h; sourceTree = "<group>"; };
@@ -60,7 +65,6 @@
 		9B6AEEB71B4D7EBC00641C60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B6AEEB91B4D7EBC00641C60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9B6AEEC01B4D7EBC00641C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B6AEEC21B4D7EBC00641C60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9B6AEEC51B4D7EBC00641C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9B6AEECB1B4D7EBC00641C60 /* iSubteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSubteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,7 +183,6 @@
 				9BB8345C1B4D8156001C645C /* ViewController */,
 				9B6AEEB91B4D7EBC00641C60 /* AppDelegate.h */,
 				9B6AEEBA1B4D7EBC00641C60 /* AppDelegate.m */,
-				9B6AEEBF1B4D7EBC00641C60 /* Main.storyboard */,
 				9B6AEEC21B4D7EBC00641C60 /* Images.xcassets */,
 				9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */,
 				9B6AEEB51B4D7EBC00641C60 /* Supporting Files */,
@@ -231,8 +234,10 @@
 				9B5336891B56E61D009A5BA8 /* UIViewController+Container.m */,
 				9BB834591B4D814D001C645C /* ISStatusTableViewController.h */,
 				9BB8345A1B4D814D001C645C /* ISStatusTableViewController.m */,
+				9B06E84E1B5981D2007CA92E /* ISStatusTableViewController.xib */,
 				9BFA6ACD1B56DFE100B2486F /* ISDetailViewController.h */,
 				9BFA6ACE1B56DFE100B2486F /* ISDetailViewController.m */,
+				9B06E8481B597E1C007CA92E /* ISDetailViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			children = (
 				9BB834621B4D8242001C645C /* ISSubwayStatusCell.h */,
 				9BB834631B4D8242001C645C /* ISSubwayStatusCell.m */,
+				9B06E84A1B597F15007CA92E /* ISSubwayStatusCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -337,11 +343,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6AEEC11B4D7EBC00641C60 /* Main.storyboard in Resources */,
+				9B06E8491B597E1C007CA92E /* ISDetailViewController.xib in Resources */,
+				9B06E8501B5981D2007CA92E /* ISStatusTableViewController.xib in Resources */,
 				9BFA6AD41B56E38200B2486F /* ISBannerOneViewController.xib in Resources */,
 				9B8185DB1B4D9E9200993CF1 /* Configuration.plist in Resources */,
 				9B6AEEC61B4D7EBC00641C60 /* LaunchScreen.xib in Resources */,
 				9B6AEEC31B4D7EBC00641C60 /* Images.xcassets in Resources */,
+				9B06E84B1B597F15007CA92E /* ISSubwayStatusCell.xib in Resources */,
 				9B5336901B571B43009A5BA8 /* ISBannerTwoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,14 +451,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9B6AEEBF1B4D7EBC00641C60 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9B6AEEC01B4D7EBC00641C60 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9B6AEEC41B4D7EBC00641C60 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

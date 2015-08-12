@@ -13,6 +13,11 @@
 #import "ISBannerOneViewController.h"
 #import "ISBannerTwoViewController.h"
 #import "ISSubwayInfo.h"
+#import "AppDelegate.h"
+
+@interface ISApplicationAssembly()<ISDetailControllerProvider>
+
+@end
 
 @implementation ISApplicationAssembly
 
@@ -21,11 +26,25 @@
     return [TyphoonDefinition configDefinitionWithName:@"Configuration.plist"];
 }
 
+- (AppDelegate *)appDelegate
+{
+    return [TyphoonDefinition withClass:[AppDelegate class]
+                          configuration:^(TyphoonDefinition *definition) {
+                [definition injectProperty:@selector(rootViewController) with:[self statusTableViewController]];
+            }];
+}
+
 - (ISStatusTableViewController *)statusTableViewController
 {
     return [TyphoonDefinition withClass:[ISStatusTableViewController class]
                           configuration:^(TyphoonDefinition *definition) {
+                              [definition useInitializer:@selector(initWithNibName:bundle:)
+                                              parameters:^(TyphoonMethod *initializer) {
+                                                  [initializer injectParameterWith:@"ISStatusTableViewController"];
+                                                  [initializer injectParameterWith:[NSBundle mainBundle]];
+                                              }];
                               [definition injectProperty:@selector(statusClient) with:[self statusClient]];
+                              [definition injectProperty:@selector(detailControllerProvider) with:self];
                           }];
 }
 
@@ -43,6 +62,11 @@
 {
     return [TyphoonDefinition withClass:[ISDetailViewController class]
                           configuration:^(TyphoonDefinition *definition) {
+                              [definition useInitializer:@selector(initWithNibName:bundle:)
+                                              parameters:^(TyphoonMethod *initializer) {
+                                                  [initializer injectParameterWith:@"ISDetailViewController"];
+                                                  [initializer injectParameterWith:[NSBundle mainBundle]];
+                                              }];
                               [definition injectProperty:@selector(bannerViewController)
                                                     with:[self bannerViewController]];
                               [definition injectProperty:@selector(subwayInfo)

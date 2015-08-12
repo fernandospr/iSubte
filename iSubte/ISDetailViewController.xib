@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISDetailViewController">
+            <connections>
+                <outlet property="bannerContainerView" destination="dHB-ll-KvE" id="IKv-8E-DcU"/>
+                <outlet property="view" destination="rVn-wG-nVd" id="der-tm-039"/>
+                <outlet property="webView" destination="7Pr-jT-jJ5" id="Btw-f0-w4O"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="rVn-wG-nVd">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pr-jT-jJ5">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-ll-KvE" userLabel="Banner Container View">
+                    <rect key="frame" x="0.0" y="508" width="600" height="92"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="92" id="ns1-1X-EpG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dHB-ll-KvE" secondAttribute="trailing" id="437-JK-RTh"/>
+                <constraint firstAttribute="trailing" secondItem="7Pr-jT-jJ5" secondAttribute="trailing" id="CJv-Qi-76q"/>
+                <constraint firstItem="7Pr-jT-jJ5" firstAttribute="leading" secondItem="rVn-wG-nVd" secondAttribute="leading" id="DxM-Tc-Ipa"/>
+                <constraint firstAttribute="bottom" secondItem="7Pr-jT-jJ5" secondAttribute="bottom" id="KgT-gY-2Z3"/>
+                <constraint firstAttribute="trailing" secondItem="dHB-ll-KvE" secondAttribute="trailing" id="NAS-c1-y9L"/>
+                <constraint firstItem="dHB-ll-KvE" firstAttribute="leading" secondItem="rVn-wG-nVd" secondAttribute="leading" id="Vox-kK-egC"/>
+                <constraint firstItem="dHB-ll-KvE" firstAttribute="leading" secondItem="rVn-wG-nVd" secondAttribute="leading" id="Yit-X8-pnG"/>
+                <constraint firstItem="7Pr-jT-jJ5" firstAttribute="leading" secondItem="rVn-wG-nVd" secondAttribute="leading" id="d0p-1U-KTJ"/>
+                <constraint firstItem="7Pr-jT-jJ5" firstAttribute="top" secondItem="rVn-wG-nVd" secondAttribute="top" id="e8V-Kb-XBc"/>
+                <constraint firstItem="7Pr-jT-jJ5" firstAttribute="top" secondItem="rVn-wG-nVd" secondAttribute="top" id="fzj-c4-a80"/>
+                <constraint firstAttribute="bottom" secondItem="dHB-ll-KvE" secondAttribute="bottom" id="ggB-7T-8p1"/>
+                <constraint firstAttribute="trailing" secondItem="7Pr-jT-jJ5" secondAttribute="trailing" id="n0x-NF-WdH"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="d0p-1U-KTJ"/>
+                    <exclude reference="fzj-c4-a80"/>
+                    <exclude reference="n0x-NF-WdH"/>
+                    <exclude reference="437-JK-RTh"/>
+                    <exclude reference="Vox-kK-egC"/>
+                </mask>
+            </variation>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>
